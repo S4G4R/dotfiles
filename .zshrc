@@ -8,7 +8,6 @@ fi
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export PATH=$PATH:/usr/lib/postgresql/13/bin
-export GOOGLE_CLOUD_PROJECT=unifize-sagar
 export KAFKA_HOME=$HOME/kafka_server
 
 # Configure zshrc history
