@@ -7,7 +7,7 @@ fi
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-export PATH=$PATH:/usr/lib/postgresql/13/bin
+export PATH=$PATH:/usr/lib/postgresql/13/bin:/opt/mssql-tools/bin
 export KAFKA_HOME=$HOME/kafka_server
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
@@ -34,3 +34,9 @@ setopt histignorespace           # skip cmds w/ leading space from history
 export HSTR_CONFIG=hicolor       # get more colors
 bindkey -s "\C-r" "\C-a hstr -- \C-j"     # bind hstr to Ctrl-r (for Vi mode check doc)
 
+# Custom aliases
+alias zshconfig="nano ~/.zshrc"
+alias zshsource="source ~/.zshrc"
+alias clr=clear
+alias sqlserver="sudo /opt/mssql/bin/sqlservr"
+alias hostname="wsl.exe hostname -I"
