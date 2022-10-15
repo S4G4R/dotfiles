@@ -9,6 +9,8 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 export PATH=$PATH:/usr/lib/postgresql/13/bin:/opt/mssql-tools/bin
 export KAFKA_HOME=$HOME/kafka_server
+
+# Export display for Xserver
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2; exit;}'):0.0
 
 # Configure zshrc history
