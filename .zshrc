@@ -9,6 +9,11 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+export ZSH="$HOME/.oh-my-zsh"
+
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:/usr/lib/postgresql/13/bin:/opt/mssql-tools/bin:$HOME/.jenv/bin:$HOME/.fly/bin
 export KAFKA_HOME=$HOME/kafka_server
