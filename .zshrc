@@ -5,13 +5,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export ZSH="$HOME/.oh-my-zsh"
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-plugins=(git)
+plugins=(git history)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -21,12 +21,6 @@ export GRAALVM_HOME=$HOME/graalvm-jdk-20.0.2+9.1
 export FLYCTL_INSTALL=$HOME/.fly
 
 eval "$(jenv init -)"
-
-# Configure zshrc history
-HISTFILE=~/.zhistory
-HISTSIZE=10000
-SAVEHIST=10000
-setopt appendhistory
 
 # Jump forward and backwards
 bindkey "^[[1;5D" backward-word
