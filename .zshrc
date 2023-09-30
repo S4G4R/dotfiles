@@ -11,24 +11,18 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-plugins=(git history)
+plugins=(git history asdf)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=$PATH:/usr/lib/postgresql/13/bin:/opt/mssql-tools/bin:$HOME/.jenv/bin:$HOME/.fly/bin
+export PATH=$PATH:/usr/lib/postgresql/13/bin:/opt/mssql-tools/bin:$HOME/.fly/bin
 export KAFKA_HOME=$HOME/kafka_server
 export GRAALVM_HOME=$HOME/graalvm-jdk-20.0.2+9.1
 export FLYCTL_INSTALL=$HOME/.fly
 
-eval "$(jenv init -)"
-
 # Jump forward and backwards
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # HSTR configuration - add this to ~/.zshrc
 alias hh=hstr                    # hh to be alias for hstr
