@@ -11,7 +11,15 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
-plugins=(git history asdf)
+# Wait on https://github.com/ohmyzsh/ohmyzsh/issues/8779, then asdf can
+# be added as a plugin
+. "$HOME/.asdf/asdf.sh"
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
+plugins=(git history)
 
 source $ZSH/oh-my-zsh.sh
 
