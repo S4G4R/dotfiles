@@ -17,6 +17,7 @@ fi
 asdf plugin-add java https://github.com/halcyon/asdf-java.git
 asdf plugin-add lein https://github.com/miorimmax/asdf-lein.git
 asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+asdf plugin-add kafka https://github.com/ueisele/asdf-kafka.git
 
 # Install runtimes
 asdf install
