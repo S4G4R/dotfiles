@@ -23,7 +23,7 @@ plugins=(git history)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=$PATH:/usr/lib/postgresql/13/bin:/opt/mssql-tools/bin:$HOME/.fly/bin:$HOME/bin
+export PATH=$PATH:$HOME/.fly/bin:$HOME/bin:$HOME/.local/bin
 export KAFKA_HOME=$HOME/.asdf/installs/kafka/apache-3.6.0
 export GRAALVM_HOME=$HOME/graalvm-jdk-20.0.2+9.1
 export FLYCTL_INSTALL=$HOME/.fly
