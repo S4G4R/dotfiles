@@ -7,3 +7,4 @@ babashka 1.12.196
 kafka apache-3.6.0
 kcctl 1.0.0.CR3
 redis 7.2.3
+argocd 2.14.5
