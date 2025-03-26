@@ -24,7 +24,7 @@ plugins=(git history)
 source $ZSH/oh-my-zsh.sh
 
 export PATH=$PATH:$HOME/.fly/bin:$HOME/bin:$HOME/.local/bin
-export KAFKA_HOME=$HOME/.asdf/installs/kafka/apache-3.6.0
+export KAFKA_HOME=$(asdf where kafka)
 export GRAALVM_HOME=$HOME/graalvm-jdk-20.0.2+9.1
 export FLYCTL_INSTALL=$HOME/.fly
 
