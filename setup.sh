@@ -10,7 +10,11 @@ fi
 
 # Download asdf version manager
 if [ ! -d "$HOME/.asdf" ] ; then
-    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+    wget https://github.com/asdf-vm/asdf/releases/download/v0.16.6/asdf-v0.16.6-linux-amd64.tar.gz
+    tar -xvzf asdf-v0.16.6-linux-amd64.tar.gz
+    chmod +x asdf
+    mv asdf $HOME/bin
+    rm asdf-v0.16.6-linux-amd64.tar.gz
 fi
 
 # Add asdf plugins

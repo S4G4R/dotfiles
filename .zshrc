@@ -23,10 +23,11 @@ plugins=(git history)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=$PATH:$HOME/.fly/bin:$HOME/bin:$HOME/.local/bin
+export PATH=$PATH:$ASDF_DATA_DIR/shims:$HOME/.fly/bin:$HOME/bin:$HOME/.local/bin
 export KAFKA_HOME=$(asdf where kafka)
 export GRAALVM_HOME=$HOME/graalvm-jdk-20.0.2+9.1
 export FLYCTL_INSTALL=$HOME/.fly
+export ASDF_DATA_DIR=$HOME/.asdf
 
 # Jump forward and backwards
 bindkey "^[[1;5D" backward-word
