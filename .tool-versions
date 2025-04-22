@@ -8,3 +8,4 @@ kafka apache-3.6.0
 kcctl 1.0.0.CR3
 redis 7.4.2
 argocd 2.14.5
+firebase 14.2.0
