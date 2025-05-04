@@ -1,13 +1,3 @@
-# Download oh-my-zsh
-if [ ! -d "$HOME/.oh-my-zsh" ] ; then
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
-
-# Download p10k theme
-if [ ! -d "$HOME/powerlevel10k" ] ; then
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-fi
-
 # Download asdf version manager
 if [ ! -d "$HOME/.asdf" ] ; then
     wget https://github.com/asdf-vm/asdf/releases/download/v0.16.6/asdf-v0.16.6-linux-amd64.tar.gz
@@ -27,6 +17,7 @@ asdf plugin-add kafka https://github.com/ueisele/asdf-kafka.git
 asdf plugin-add kcctl https://github.com/joschi/asdf-kcctl.git
 asdf plugin-add redis https://github.com/smashedtoatoms/asdf-redis.git
 asdf plugin-add argocd https://github.com/beardix/asdf-argocd.git
+asdf plugin add starship
 
 # Install runtimes
 asdf install
