@@ -1,5 +1,6 @@
 export PATH=$PATH:${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$HOME/.fly/bin:$HOME/bin:$HOME/.local/bin
 export KAFKA_HOME=$(asdf where kafka)
+export JAVA_HOME=$(asdf where java)
 export GRAALVM_HOME=$HOME/graalvm-jdk-20.0.2+9.1
 export FLYCTL_INSTALL=$HOME/.fly
 export ASDF_DATA_DIR=$HOME/.asdf
