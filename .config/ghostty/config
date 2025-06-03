@@ -1,0 +1,8 @@
+# Fonts
+font-family = "JetBrains Mono"
+font-size = 18
+
+# Cursor
+cursor-style = block
+cursor-style-blink = false
+shell-integration-features = no-cursor
