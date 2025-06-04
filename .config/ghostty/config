@@ -6,3 +6,12 @@ font-size = 18
 cursor-style = block
 cursor-style-blink = false
 shell-integration-features = no-cursor
+
+# Theme
+theme = catppuccin-mocha
+
+# Splits
+keybind = super+ctrl+down=resize_split:down,50
+keybind = super+ctrl+up=resize_split:up,50
+keybind = super+ctrl+left=resize_split:left,50
+keybind = super+ctrl+right=resize_split:right,50
