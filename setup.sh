@@ -1,4 +1,4 @@
-sudo apt install curl make rlwrap fontconfig fzf
+sudo apt install curl make rlwrap fontconfig fzf micro
 
 # Download asdf version manager
 if [ ! -d "$HOME/.asdf" ] ; then
