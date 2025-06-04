@@ -1,9 +1,10 @@
-export PATH=$PATH:${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$HOME/.fly/bin:$HOME/bin:$HOME/.local/bin
+# Setup PATH
 export KAFKA_HOME=$(asdf where kafka)
 export JAVA_HOME=$(asdf where java)
-export GRAALVM_HOME=$HOME/graalvm-jdk-20.0.2+9.1
+export POSTGRES_HOME=$(which psql | xargs dirname)
 export FLYCTL_INSTALL=$HOME/.fly
 export ASDF_DATA_DIR=$HOME/.asdf
+export PATH=$PATH:${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$HOME/.fly/bin:$POSTGRES_HOME:$HOME/bin:$HOME/.local/bin
 
 # append completions to fpath
 fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
@@ -14,9 +15,24 @@ autoload -Uz compinit && compinit
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
+# history config
+setopt histignorespace           # skip cmds w/ leading space from history
+setopt histignoredups
+setopt sharehistory
+setopt histreduceblanks
+setopt incappendhistory
+HISTFILE="$HOME/.zsh_history"   
+SAVEHIST=10000000
+HISTSIZE=10000000
+
+# fzf shell integration
+# This can replace HSTR, and for that we can move it below the HSTR config
+# Directly executing a command doesn't work though, see
+# https://github.com/junegunn/fzf/issues/477
+source <(fzf --zsh)
+
 # HSTR configuration 
 alias hh=hstr                    # hh to be alias for hstr
-setopt histignorespace           # skip cmds w/ leading space from history
 export HSTR_CONFIG=hicolor       # get more colors
 hstr_no_tiocsti() {
     zle -I
@@ -28,10 +44,6 @@ hstr_no_tiocsti() {
 zle -N hstr_no_tiocsti
 bindkey '\C-r' hstr_no_tiocsti
 export HSTR_TIOCSTI=y
-HISTCONTROL=ignorespace   # leading space hides commands from history
-HISTFILE="$HOME/.zsh_history"
-SAVEHIST=10000000
-HISTSIZE=10000000
 # ensure synchronization between bash memory and history file
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 # if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
@@ -43,6 +55,7 @@ alias zshsource="source ~/.zshrc"
 alias clr=clear
 alias sqlserver="sudo /opt/mssql/bin/sqlservr"
 alias hostname="wsl.exe hostname -I"
+alias ls=eza
 
 eval "$(starship init zsh)"
 eval "$(starship completions zsh)"
