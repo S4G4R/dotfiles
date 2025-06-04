@@ -56,6 +56,7 @@ alias clr=clear
 alias sqlserver="sudo /opt/mssql/bin/sqlservr"
 alias hostname="wsl.exe hostname -I"
 alias ls=eza
+alias nano=micro
 
 eval "$(starship init zsh)"
 eval "$(starship completions zsh)"
