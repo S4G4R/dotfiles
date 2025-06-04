@@ -22,6 +22,7 @@ asdf plugin add redis https://github.com/smashedtoatoms/asdf-redis.git
 asdf plugin add argocd https://github.com/beardix/asdf-argocd.git
 asdf plugin add firebase
 asdf plugin-add tmux https://github.com/aphecetche/asdf-tmux.git
+asdf plugin add fzf https://github.com/kompiro/asdf-fzf.git
 
 # Install runtimes
 asdf install

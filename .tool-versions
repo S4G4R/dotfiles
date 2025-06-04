@@ -11,3 +11,4 @@ argocd 2.14.5
 firebase 14.2.0
 golang 1.24.2
 tmux 3.5a
+fzf 0.62.0
