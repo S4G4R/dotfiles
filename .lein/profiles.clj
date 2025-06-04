@@ -1,9 +1,6 @@
 {:user {:plugins [[lein-monolith "1.10.0"]
                   [cider/cider-nrepl "0.55.7"]
-                  [org.clojars.timvisher/lein-checkout "0.4.2"]]
-        :checkout {:search-roots ["/home/sagar/unifize-server/libs"]}
-        ;; :jvm-opts ["-Djava.net.preferIPv4Addresses=true"]
-	}
+                  [org.clojars.timvisher/lein-checkout "0.4.2"]]}}
  :bench {:jvm-opts ["-Djdk.attach.allowAttachSelf"]
          :dependencies [[com.clojure-goes-fast/clj-memory-meter "0.3.0"]
                         [criterium "0.4.6"]]}
