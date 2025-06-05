@@ -1,5 +1,7 @@
 {
     "Alt-/": "lua:comment.comment",
     "CtrlUnderscore": "lua:comment.comment",
-    "Ctrl-d": "DeleteWordRight"
+    "Ctrl-d": "DeleteWordRight",
+    "CtrlSpace": "DeleteWordLeft",
+    "Ctrl-k": "DeleteLine"
 }
