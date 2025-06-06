@@ -1,4 +1,8 @@
-sudo apt install curl make rlwrap fontconfig fzf micro
+sudo apt install curl make rlwrap fontconfig fzf micro eza bat
+
+# bat is installed as batcat, setup a symlink
+mkdir -p ~/.local/bin
+ln -s /usr/bin/batcat ~/.local/bin/bat
 
 # Download asdf version manager
 if [ ! -d "$HOME/.asdf" ] ; then
