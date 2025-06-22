@@ -1,9 +1,9 @@
 # Setup PATH
 export ASDF_DATA_DIR=$HOME/.asdf
+export POSTGRES_HOME=$(which psql | xargs dirname)
 export PATH=$PATH:${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$HOME/.fly/bin:$POSTGRES_HOME:$HOME/bin:$HOME/.local/bin
 export KAFKA_HOME=$(asdf where kafka)
 export JAVA_HOME=$(asdf where java)
-export POSTGRES_HOME=$(which psql | xargs dirname)
 export FLYCTL_INSTALL=$HOME/.fly
 export EDITOR=micro
 
