@@ -1,0 +1,8 @@
+alias zshconfig="nano ~/.zshrc"
+alias zshsource="source ~/.zshrc"
+alias clr=clear
+alias sqlserver="sudo /opt/mssql/bin/sqlservr"
+alias hostname="wsl.exe hostname -I"
+alias ls=eza
+alias nano=micro
+alias cat=bat

@@ -51,14 +51,7 @@ export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 bindkey -s "\C-r" "\C-a hstr -- \C-j"
 
 # Custom aliases
-alias zshconfig="nano ~/.zshrc"
-alias zshsource="source ~/.zshrc"
-alias clr=clear
-alias sqlserver="sudo /opt/mssql/bin/sqlservr"
-alias hostname="wsl.exe hostname -I"
-alias ls=eza
-alias nano=micro
-alias cat=bat
+source $HOME/.aliases
 
 eval "$(starship init zsh)"
 eval "$(starship completions zsh)"
