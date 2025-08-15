@@ -27,6 +27,7 @@ asdf plugin add argocd https://github.com/beardix/asdf-argocd.git
 asdf plugin add firebase
 asdf plugin-add tmux https://github.com/aphecetche/asdf-tmux.git
 asdf plugin add fzf https://github.com/kompiro/asdf-fzf.git
+asdf plugin add zig https://github.com/asdf-community/asdf-zig.git
 
 # Install runtimes
 asdf install
