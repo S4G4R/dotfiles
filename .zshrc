@@ -1,16 +1,8 @@
 # Setup PATH
-export ASDF_DATA_DIR=$HOME/.asdf
 export POSTGRES_HOME=$(which psql | xargs dirname)
-export PATH=$PATH:${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$HOME/.fly/bin:$POSTGRES_HOME:$HOME/bin:$HOME/.local/bin
-export KAFKA_HOME=$(asdf where kafka)
-export JAVA_HOME=$(asdf where java)
+export PATH=$PATH:$HOME/.fly/bin:$POSTGRES_HOME:$HOME/bin:$HOME/.local/bin:$HOME/xwayland-satellite/target/release
 export FLYCTL_INSTALL=$HOME/.fly
 export EDITOR=micro
-
-# append completions to fpath
-fpath=(${ASDF_DATA_DIR:-$HOME/.asdf}/completions $fpath)
-# initialise completions with ZSH's compinit
-autoload -Uz compinit && compinit
 
 # Jump forward and backwards
 bindkey "^[[1;5D" backward-word
@@ -55,3 +47,5 @@ source $HOME/.aliases
 
 eval "$(starship init zsh)"
 eval "$(starship completions zsh)"
+
+eval "$($HOME/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
