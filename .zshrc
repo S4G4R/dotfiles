@@ -8,6 +8,9 @@ export EDITOR=micro
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
 # history config
 setopt histignorespace           # skip cmds w/ leading space from history
 setopt histignoredups
