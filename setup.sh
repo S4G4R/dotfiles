@@ -6,12 +6,12 @@ ln -s /usr/bin/batcat ~/.local/bin/bat
 
 # Download asdf version manager
 if [ ! -d "$HOME/.asdf" ] ; then
-    wget https://github.com/asdf-vm/asdf/releases/download/v0.16.6/asdf-v0.16.6-linux-amd64.tar.gz
-    tar -xvzf asdf-v0.16.6-linux-amd64.tar.gz
+    wget https://github.com/asdf-vm/asdf/releases/download/v0.18.0/asdf-v0.18.0-linux-amd64.tar.gz
+    tar -xvzf asdf-v0.18.0-linux-amd64.tar.gz
     chmod +x asdf
     mkdir $HOME/bin
     mv asdf $HOME/bin/asdf
-    rm asdf-v0.16.6-linux-amd64.tar.gz
+    rm asdf-v0.18.0-linux-amd64.tar.gz
 fi
 
 # Add asdf plugins
