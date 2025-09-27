@@ -1,5 +1,5 @@
 # Shell
-command = /usr/bin/zsh
+command = /bin/zsh
 
 # Fonts
 font-family = "JetBrains Mono"
@@ -11,7 +11,7 @@ cursor-style-blink = false
 shell-integration-features = no-cursor
 
 # Theme
-theme = catppuccin-mocha
+theme = catppuccin-mocha.conf
 
 # Splits
 keybind = super+ctrl+down=resize_split:down,50
