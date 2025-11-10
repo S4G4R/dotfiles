@@ -50,5 +50,4 @@ source $HOME/.aliases
 
 eval "$(starship init zsh)"
 eval "$(starship completions zsh)"
-
-eval "$($HOME/.local/bin/mise activate zsh)" # added by https://mise.run/zsh
+eval "$(mise activate zsh)"
