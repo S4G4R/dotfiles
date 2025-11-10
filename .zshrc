@@ -21,6 +21,13 @@ HISTFILE="$HOME/.zsh_history"
 SAVEHIST=10000000
 HISTSIZE=10000000
 
+# Custom aliases
+source $HOME/.aliases
+
+eval "$(starship init zsh)"
+eval "$(starship completions zsh)"
+eval "$(mise activate zsh)"
+
 # fzf shell integration
 # This can replace HSTR, and for that we can move it below the HSTR config
 # Directly executing a command doesn't work though, see
@@ -44,10 +51,3 @@ export HSTR_TIOCSTI=y
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 # if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
 bindkey -s "\C-r" "\C-a hstr -- \C-j"
-
-# Custom aliases
-source $HOME/.aliases
-
-eval "$(starship init zsh)"
-eval "$(starship completions zsh)"
-eval "$(mise activate zsh)"
