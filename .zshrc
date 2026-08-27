@@ -51,3 +51,10 @@ export HSTR_TIOCSTI=y
 export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"
 # if this is interactive shell, then bind hstr to Ctrl-r (for Vi mode check doc)
 bindkey -s "\C-r" "\C-a hstr -- \C-j"
+
+# bun completions
+[ -s "/Users/sagar/.bun/_bun" ] && source "/Users/sagar/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
