@@ -36,7 +36,17 @@
            {:extra-deps {cider/cider-nrepl {:mvn/version "0.55.1"}}
             :main-opts ["-m" "nrepl.cmdline"
                         "--middleware" "[cider.nrepl/cider-middleware]"
-                        "--interactive"]}}
+                        "--interactive"]}
+           :repl 
+           {:extra-deps {io.github.clojure/clojure-cli.repl-server {:mvn/version "0.1.0"}}
+            :main-opts ["-m" "clojure-cli.repl.server" "repl"]}
+           :serve  
+           {:extra-deps {io.github.clojure/clojure-cli.repl-server {:mvn/version "0.1.0"}}
+            :main-opts ["-m" "clojure-cli.repl.server"]}
+           :attach 
+           {:replace-paths []
+            :replace-deps {io.github.clojure/clojure-cli.repl-client {:mvn/version "0.1.0"}}
+            :main-opts ["-m" "clojure-cli.repl.client"]}}
 
  ;; Provider attributes
 
