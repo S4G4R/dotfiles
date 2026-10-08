@@ -13,7 +13,8 @@
  ;;   Directories in the current project to include in the classpath
  :paths ["src" "clojure"]
  ;; External dependencies
- :deps {org.clojure/clojure {:mvn/version "1.12.0"}}
+ :deps {org.clojure/clojure {:mvn/version "1.12.0"}
+        org.clojars.abhinav/snitch {:mvn/version "0.1.16"}}
  ;; Aliases
  ;;   resolve-deps aliases (-R) affect dependency resolution, options:
  ;;     :extra-deps - specifies extra deps to add to :deps
